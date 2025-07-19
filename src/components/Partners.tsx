@@ -22,7 +22,7 @@ const animationStyles = `
 import kukaLogo from "../../assest/kuka.jpg";
 import amtzLogo from "../../assest/Amtz-removebg-preview.png";
 import ieeeLogo from "../../assest/IEEE-removebg-preview.png";
-import mrubyLogo from "../../assest/MSME.jpg";
+import mrubyLogo from "../../assest/mruby.png";
 import meityLogo from "../../assest/meity-logo.avif";
 import froniusLogo from "../../assest/Fronius.jpg";
 import startupTnLogo from "../../assest/StartupTN.jpg";
