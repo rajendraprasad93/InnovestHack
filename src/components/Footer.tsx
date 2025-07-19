@@ -1,5 +1,6 @@
 import React from "react";
-import { Heart, Code, Zap } from "lucide-react";
+import { Heart, Code } from "lucide-react";
+import innovest from "../../assest/Black Innovest LOGO.png";
 
 // Animation styles
 const animationStyles = `
@@ -35,7 +36,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-[#0c0d5f] to-[#070730] text-white py-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-[#0c0d5f] to-[#070730] text-white py-16 relative overflow-visible">
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
 
       {/* Decorative elements */}
@@ -54,8 +55,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
+              {/* Container remains w-10 h-10 */}
               <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <img
+                  src={innovest}
+                  alt="Innovest Logo"
+                  className="w-full h-full object-contain transform scale-125"
+                  style={{ transformOrigin: "center center" }}
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold font-serif">
