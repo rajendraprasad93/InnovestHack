@@ -187,7 +187,7 @@ const About = () => {
           }}
         >
           {/* Decorative elements */}
-{/*           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
           
           <Rocket className="w-12 h-12 text-white/80 mx-auto mb-4" />
@@ -203,7 +203,7 @@ const About = () => {
           <button className="mt-6 bg-white text-yellow-500 px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
             Register Now
           </button>
-        </div> */}
+        </div>
       </div>
     </section>
   );
