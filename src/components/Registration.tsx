@@ -41,7 +41,10 @@ const Registration = () => {
   ];
 
   const handleRegister = () => {
-    window.open("https://forms.google.com/techfront2025", "_blank");
+    window.open(
+      "https://unstop.com/o/ZayQuGz?lb=djZ6LQr&utm_medium=Share&utm_source=shortUrl",
+      "_blank"
+    );
   };
 
   return (
@@ -50,18 +53,18 @@ const Registration = () => {
       className="py-20 bg-gradient-to-b from-[#ffffff] via-[#f8f9ff] to-[#f0f4fa] pattern-dots relative overflow-hidden"
     >
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
-      
+
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-10 right-1/4 w-72 h-72 bg-yellow-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-1/4 w-80 h-80 bg-purple-100/20 rounded-full blur-3xl"></div>
-        
+
         {/* Animated floating shapes */}
         <div className="floating-shape absolute top-[65%] right-[5%] w-16 h-16 bg-yellow-100/40 rounded-full backdrop-blur-md border border-yellow-200"></div>
         <div className="floating-shape absolute top-[15%] left-[5%] w-24 h-24 bg-purple-100/30 rounded-full backdrop-blur-md border border-purple-200"></div>
         <div className="floating-shape absolute bottom-[10%] left-[20%] w-20 h-20 bg-yellow-100/40 rounded-md rotate-45 backdrop-blur-md border border-yellow-200"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">

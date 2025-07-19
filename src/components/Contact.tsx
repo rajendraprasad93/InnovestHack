@@ -59,18 +59,18 @@ const Contact = () => {
       className="py-20 bg-gradient-to-b from-[#f0f4fa] via-[#f8f9ff] to-[#ffffff] pattern-dots relative overflow-hidden"
     >
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
-      
+
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-10 left-1/4 w-72 h-72 bg-yellow-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-purple-100/20 rounded-full blur-3xl"></div>
-        
+
         {/* Animated floating shapes */}
         <div className="floating-shape absolute top-[15%] left-[10%] w-16 h-16 bg-yellow-100/40 rounded-full backdrop-blur-md border border-yellow-200"></div>
         <div className="floating-shape absolute top-[25%] right-[15%] w-24 h-24 bg-purple-100/30 rounded-full backdrop-blur-md border border-purple-200"></div>
         <div className="floating-shape absolute bottom-[30%] left-[20%] w-20 h-20 bg-yellow-100/40 rounded-md rotate-45 backdrop-blur-md border border-yellow-200"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-serif">
@@ -102,12 +102,12 @@ const Contact = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl p-8 md:p-12 text-white text-center relative overflow-hidden">
+          {/*<div className="mt-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl p-8 md:p-12 text-white text-center relative overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-            
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">
+          {/* <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div> */}
+
+          {/* <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">
               Ready to Join the Innovation Revolution?
             </h3>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-6 relative z-10">
@@ -118,8 +118,8 @@ const Contact = () => {
             <button className="inline-flex items-center space-x-2 bg-white text-yellow-500 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 relative z-10">
               <span>Register Today</span>
               <Mail className="w-5 h-5" />
-            </button>
-          </div>
+            </button> */}
+          {/*</div>*/}
         </div>
       </div>
     </section>
