@@ -82,10 +82,10 @@ const Hero = () => {
   }, []);
   // Images array for slideshow
   const images = [
-    "../assest/cit-1.jpg",
-    "../assest/cit-2.jpeg",
-    "../assest/cit-3.jpg",
-    "../assest/cit-4.jpeg",
+    "../../assest/cit-1.jpg",
+    "../../assest/cit-2.jpeg",
+    "../../assest/cit-3.jpg",
+    "../../assest/cit-4.jpeg",
   ];
 
   // State for current image
