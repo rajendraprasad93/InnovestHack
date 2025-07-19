@@ -19,9 +19,9 @@ const animationStyles = `
 `;
 
 // Import partner logos from the 'assest' folder
-import kukaLogo from "../../assest/idealab.png";
+import kukaLogo from "../../assest/kuka.jpg";
 import amtzLogo from "../../assest/Amtz-removebg-preview.png";
-import ieeeLogo from "../../assest/AICTE.jpg";
+import ieeeLogo from "../../assest/IEEE-removebg-preview.png";
 import mrubyLogo from "../../assest/MSME.jpg";
 import meityLogo from "../../assest/meity-logo.avif";
 import froniusLogo from "../../assest/Fronius.jpg";
@@ -43,7 +43,7 @@ const partners = [
   { name: "Fronius", type: "Industry Partner", logo: froniusLogo },
   { name: "StartupTN", type: "Startup Ecosystem Partner", logo: startupTnLogo },
   { name: "Idealab", type: "Technology Partner", logo: idealabLogo },
-  { name: "EdIIITN", type: "Startup Ecosystem Partner", logo: ediiLogo },
+  { name: "EdIITN", type: "Startup Ecosystem Partner", logo: ediiLogo },
   { name: "AICTE", type: "Startup Ecosystem Partner", logo: aicteLogo },
   { name: "MSME", type: "Startup Ecosystem Partner", logo: msmeLogo },
   { name: "Startup India", type: "Startup Ecosystem Partner", logo: indiaLogo },
