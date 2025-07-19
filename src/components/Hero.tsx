@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import cit1 from "../../assest/cit-1.jpg";
+import cit2 from "../../assest/cit-2.jpeg";
+import cit3 from "../../assest/cit-3.jpg";
+import cit4 from "../../assest/cit-4.jpeg"
 import {
   Calendar,
   MapPin,
@@ -82,10 +86,10 @@ const Hero = () => {
   }, []);
   // Images array for slideshow
   const images = [
-    "../../assest/cit-1.jpg",
-    "../../assest/cit-2.jpeg",
-    "../../assest/cit-3.jpg",
-    "../../assest/cit-4.jpeg",
+    cit1,
+    cit2,
+    cit3,
+    cit4,
   ];
 
   // State for current image
