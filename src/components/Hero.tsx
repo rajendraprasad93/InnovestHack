@@ -8,7 +8,7 @@ import {
   Lightbulb,
   Shield,
 } from "lucide-react";
-import Head from "next/head";
+// import Head from "next/head";
 // No need for Image import as we're using standard img tag
 
 const Hero = () => {
@@ -228,7 +228,7 @@ const Hero = () => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -239,7 +239,7 @@ const Hero = () => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </Head> */}
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
       <section
         id="hero"
