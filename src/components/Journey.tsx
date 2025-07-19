@@ -42,7 +42,7 @@ const Journey = () => {
       description:
         "Selected ideas go through expert online screening and mentoring.",
       color: "from-green-500 to-green-600",
-      date: "6/8/2025 11/8/2025",
+      date: "6/8/2025-11/8/2025",
     },
     {
       icon: CheckCircle,
@@ -93,7 +93,7 @@ const Journey = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-yellow-500 to-amber-500 rounded-full hidden md:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-yellow-500 to-amber-500 rounded-full hidden md:block z-0"></div>
 
           {phases.map((phase, index) => (
             <div
@@ -127,13 +127,13 @@ const Journey = () => {
                 {/* Timeline icon for desktop */}
                 <div className="hidden md:flex mt-4">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${phase.color} rounded-full flex items-center justify-center shadow-lg`}
+                    className={`w-16 h-16 bg-gradient-to-r ${phase.color} rounded-full flex items-center justify-center shadow-lg z-10`}
                   >
                     <phase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 {/* Timeline icon for mobile */}
-                <div className="md:hidden w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mb-4 shadow-lg mt-4">
+                <div className="md:hidden w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full flex items-center justify-center mb-4 shadow-lg mt-4 z-10">
                   <phase.icon className="w-6 h-6 text-white" />
                 </div>
               </div>

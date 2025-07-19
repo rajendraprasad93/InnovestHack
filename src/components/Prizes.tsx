@@ -25,42 +25,36 @@ const Prizes = () => {
       title: "Winner",
       description: "Grant & 1,00,000 + Trophy + Certificate",
       color: "from-yellow-500 to-amber-500",
-      rank: "🥇",
     },
     {
       icon: Medal,
       title: "Runner-Up",
       description: "Grant & 75,000 + Certificate",
       color: "from-purple-400 to-purple-600",
-      rank: "🥈",
     },
     {
       icon: Medal,
       title: "2nd Runner-Up",
       description: "Grant & 50,000 + Certificate",
       color: "from-yellow-400 to-yellow-500",
-      rank: "🥉",
     },
     {
       icon: Award,
       title: "Best Domain Innovations",
       description: "Special recognition for each domain",
       color: "from-purple-500 to-purple-700",
-      rank: "🏅",
     },
     {
       icon: Rocket,
       title: "Incubation Support",
       description: "Mentoring from StartupTN & Partners",
       color: "from-yellow-500 to-amber-600",
-      rank: "🚀",
     },
     {
       icon: GraduationCap,
       title: "Participation Certificates",
       description: "Recognition for all participants",
       color: "from-purple-400 to-purple-600",
-      rank: "🎓",
     },
   ];
 
