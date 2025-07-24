@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import cit1 from "../../assest/cit-1.jpg";
+import cit2 from "../../assest/cit-2.jpeg";
+import cit3 from "../../assest/cit-3.jpg";
+import cit4 from "../../assest/cit-4.jpeg";
+import innovest from "../../assest/Black Innovest LOGO.png";
 import {
   Calendar,
   MapPin,
@@ -8,8 +13,6 @@ import {
   Lightbulb,
   Shield,
 } from "lucide-react";
-// import Head from "next/head";
-// No need for Image import as we're using standard img tag
 
 const Hero = () => {
   // State for shooting stars
@@ -80,13 +83,9 @@ const Hero = () => {
 
     setFloatingIcons(Array.from({ length: 8 }, generateIcon));
   }, []);
+
   // Images array for slideshow
-  const images = [
-    "../assest/cit-1.jpg",
-    "../assest/cit-2.jpeg",
-    "../assest/cit-3.jpg",
-    "../assest/cit-4.jpeg",
-  ];
+  const images = [cit1, cit2, cit3, cit4];
 
   // State for current image
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -98,28 +97,29 @@ const Hero = () => {
     }, 2000); // Change image every 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
+
   // CSS for animations
   const animationStyles = `
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
-    
+
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-    
+
     @keyframes shimmer {
       0% { text-shadow: 0 0 0 rgba(255,165,0,0); }
       50% { text-shadow: 0 0 10px rgba(255,165,0,0.5); }
       100% { text-shadow: 0 0 0 rgba(255,165,0,0); }
     }
-    
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: scale(1.05); }
       100% { opacity: 1; transform: scale(1); }
     }
-    
+
     @keyframes slideIndicator {
       0% { transform: scale(1); }
       50% { transform: scale(1.5); }
@@ -131,18 +131,18 @@ const Hero = () => {
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
+
     @keyframes textFocusIn {
       0% { filter: blur(12px); opacity: 0; }
       100% { filter: blur(0px); opacity: 1; }
     }
-    
+
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0px); }
     }
-    
+
     @keyframes shootingStar {
       0% {
         transform: translateX(0) translateY(0) rotate(45deg);
@@ -156,28 +156,28 @@ const Hero = () => {
         opacity: 0;
       }
     }
-    
+
     @keyframes wave {
       0%, 100% { transform: translateY(0); }
       25% { transform: translateY(-15px); }
       75% { transform: translateY(15px); }
     }
-    
+
     @keyframes rotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    
+
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
     }
-    
+
     .pattern-grid {
       background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
       background-size: 20px 20px;
     }
-    
+
     .pattern-dots {
       background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
       background-size: 30px 30px;
@@ -206,7 +206,7 @@ const Hero = () => {
 
       const animate = () => {
         time += 0.005;
-        const element = shape as HTMLElement;
+        const element = shape as HTMLElement; // Type assertion for TypeScript
 
         // Create gentle floating motion
         const translateX = startX + Math.sin(time * speed) * 15;
@@ -228,6 +228,7 @@ const Hero = () => {
 
   return (
     <>
+      {/* If using Next.js uncomment this block */}
       {/* <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -291,44 +292,57 @@ const Hero = () => {
                   CITBIF's Innovation Challenge
                 </span>
               </div>
-
-              {/* Main Title */}
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 font-serif">
-                <span style={{ display: "inline-flex", alignItems: "center" }}>
-                  <span
-                    className="text-[#0c0d5f]"
-                    style={{
-                      fontFamily: "'Montserrat', sans-serif",
-                      fontWeight: 900,
-                      letterSpacing: "-1px",
-                      animation:
-                        "textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, pulse 2s ease-in-out infinite",
-                    }}
-                  >
-                    Innovest
-                  </span>
-                  <span
-                    className="text-yellow-500"
-                    style={{
-                      fontFamily: "'Montserrat', sans-serif",
-                      fontWeight: 900,
-                      letterSpacing: "-1px",
-                      animation:
-                        "textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, shimmer 3s ease-in-out infinite",
-                    }}
-                  >
-                    Hack
-                  </span>
-                </span>
-                <span
-                  className="block text-purple-700 text-2xl md:text-3xl font-medium mt-2 font-sans"
+              <div className="relative flex flex-col items-start">
+                <img
+                  src={innovest}
+                  alt="Innovest Logo"
+                  // Adjusted 'left' to move the logo further right
+                  className="absolute -top-[180px] left-[150px] w-[300px] md:w-[350px] lg:w-[450px] opacity-90 z-20"
                   style={{
-                    animation: "float 3s ease-in-out infinite",
+                    objectFit: "contain",
+                    pointerEvents: "none", // So it doesn't block any clicks
                   }}
-                >
-                  2025
-                </span>
-              </h1>
+                />
+                {/* Main Title */}
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 font-serif">
+                  <span
+                    style={{ display: "inline-flex", alignItems: "center" }}
+                  >
+                    <span
+                      className="text-[#0c0d5f]"
+                      style={{
+                        fontFamily: "'Montserrat', sans-serif",
+                        fontWeight: 900,
+                        letterSpacing: "-1px",
+                        animation:
+                          "textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, pulse 2s ease-in-out infinite",
+                      }}
+                    >
+                      Innovest
+                    </span>
+                    <span
+                      className="text-yellow-500"
+                      style={{
+                        fontFamily: "'Montserrat', sans-serif",
+                        fontWeight: 900,
+                        letterSpacing: "-1px",
+                        animation:
+                          "textFocusIn 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, shimmer 3s ease-in-out infinite",
+                      }}
+                    >
+                      Hack
+                    </span>
+                  </span>
+                  <span
+                    className="block text-purple-700 text-2xl md:text-3xl font-medium mt-2 font-sans"
+                    style={{
+                      animation: "float 3s ease-in-out infinite",
+                    }}
+                  >
+                    2025
+                  </span>
+                </h1>
+              </div>
 
               {/* Tagline */}
               <p className="text-lg md:text-xl text-gray-600 mb-8 font-sans">
@@ -370,7 +384,7 @@ const Hero = () => {
                   <div className="absolute inset-0 w-full h-full">
                     {images.map((src, index) => (
                       <div
-                        key={src}
+                        key={index}
                         className="absolute inset-0 w-full h-full"
                         style={{
                           opacity: index === currentImageIndex ? 1 : 0,
@@ -591,5 +605,4 @@ const Hero = () => {
     </>
   );
 };
-
 export default Hero;

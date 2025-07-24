@@ -1,5 +1,5 @@
 import React from "react";
-import { Building, Handshake } from "lucide-react";
+import { Building } from "lucide-react";
 
 // Animation styles
 const animationStyles = `
@@ -19,10 +19,10 @@ const animationStyles = `
 `;
 
 // Import partner logos from the 'assest' folder
-import kukaLogo from "../../assest/idealab.png"; // Placeholder for KUKA, replace with actual if available
-import amtzLogo from "../../assest/Amtz-removebg-preview.png"; // Placeholder for AMTZ, replace with actual if available
-import ieeeLogo from "../../assest/AICTE.jpg"; // Placeholder for IEEE, replace with actual if available
-import mrubyLogo from "../../assest/MSME.jpg"; // Placeholder for Mruby, replace with actual if available
+import kukaLogo from "../../assest/kuka.jpg";
+import amtzLogo from "../../assest/Amtz-removebg-preview.png";
+import ieeeLogo from "../../assest/IEEE-removebg-preview.png";
+import mrubyLogo from "../../assest/mruby.png";
 import meityLogo from "../../assest/meity-logo.avif";
 import froniusLogo from "../../assest/Fronius.jpg";
 import startupTnLogo from "../../assest/StartupTN.jpg";
@@ -43,7 +43,7 @@ const partners = [
   { name: "Fronius", type: "Industry Partner", logo: froniusLogo },
   { name: "StartupTN", type: "Startup Ecosystem Partner", logo: startupTnLogo },
   { name: "Idealab", type: "Technology Partner", logo: idealabLogo },
-  { name: "EdIIITN", type: "Startup Ecosystem Partner", logo: ediiLogo },
+  { name: "EdIITN", type: "Startup Ecosystem Partner", logo: ediiLogo },
   { name: "AICTE", type: "Startup Ecosystem Partner", logo: aicteLogo },
   { name: "MSME", type: "Startup Ecosystem Partner", logo: msmeLogo },
   { name: "Startup India", type: "Startup Ecosystem Partner", logo: indiaLogo },
@@ -82,49 +82,63 @@ const Partners = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="group bg-white p-8 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-200 hover:-translate-y-1"
-            >
-              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 bg-white rounded-xl shadow">
-                {partner.logo ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name + " logo"}
-                    className="w-14 h-14 object-contain"
-                  />
-                ) : (
-                  <Building className="w-8 h-8 text-blue-400" />
-                )}
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 text-center mb-2">
-                {partner.name}
-              </h3>
-              <p className="text-sm text-slate-600 text-center">
-                {partner.type}
-              </p>
-            </div>
-          ))}
-        </div>
+          {partners.map((partner, index) => {
+            // Center the last row (items 13 and 14)
+            if (index === 12) {
+              return (
+                <React.Fragment key={index}>
+                  <div className="hidden lg:block"></div>
+                  <div
+                    className="group bg-white p-8 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-200 hover:-translate-y-1"
+                  >
+                    <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 bg-white rounded-xl shadow">
+                      {partner.logo ? (
+                        <img
+                          src={partner.logo}
+                          alt={partner.name + " logo"}
+                          className="w-14 h-14 object-contain"
+                        />
+                      ) : (
+                        <Building className="w-8 h-8 text-blue-400" />
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 text-center mb-2">
+                      {partner.name}
+                    </h3>
+                    <p className="text-sm text-slate-600 text-center">
+                      {partner.type}
+                    </p>
+                  </div>
+                </React.Fragment>
+              );
+            }
 
-        {/* <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-white text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Handshake className="w-12 h-12 mr-4" />
-            <h3 className="text-2xl md:text-3xl font-bold">
-              Join Our Partnership Network
-            </h3>
-          </div>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-6">
-            Be part of India's most innovative hackathon ecosystem. Connect with
-            brilliant minds, discover breakthrough technologies, and shape the
-            future of tech education.
-          </p>
-          <button className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-orange-600 transition-all duration-300">
-            <span>Partner With Us</span>
-            <Building className="w-5 h-5" />
-          </button>
-        </div> */}
+            return (
+              <div
+                key={index}
+                className="group bg-white p-8 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-200 hover:-translate-y-1"
+              >
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 bg-white rounded-xl shadow">
+                  {partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={partner.name + " logo"}
+                      className="w-14 h-14 object-contain"
+                    />
+                  ) : (
+                    <Building className="w-8 h-8 text-blue-400" />
+                  )}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 text-center mb-2">
+                  {partner.name}
+                </h3>
+                <p className="text-sm text-slate-600 text-center">
+                  {partner.type}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -55,8 +55,8 @@ const Header = () => {
             <img
               src={CITBifLogo}
               alt="CITBIF New Logo"
-              className="h-20 w-auto object-contain"
-              style={{ minWidth: "66px" }}
+              className="h-40 w-auto object-contain"
+              style={{ minWidth: "46px" }}
             />
             <img
               src={CITILLogo}
